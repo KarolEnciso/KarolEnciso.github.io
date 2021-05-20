@@ -1,0 +1,125 @@
+/*Sección de galeria*/
+
+.container-invitadas {
+    width: 100%;
+
+    h2 {
+        padding: 0px 5%;
+        font-size: $px36;
+        margin-bottom: 14px;
+    }
+
+    .galeria-invitadas {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+
+        .image-galeria {
+            width: 100%;
+        }
+    }
+}
+
+
+/*Sección "Algunos temas"*/
+
+.container-topicos {
+    padding: 0px 5%;
+
+    h2 {
+        font-size: $px36;
+        line-height: $px42;
+        padding-top: $px30;
+        padding-bottom: 37px;
+    }
+}
+
+.list-topicos {
+
+    .item-list {
+        margin-bottom: 50px;
+    }
+
+    .image-list {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p {
+        text-align: center;
+        font-size: $px24;
+        font-weight: bold;
+        letter-spacing: 0;
+        margin-top: 13px;
+    }
+}
+
+/*Fin de sección "Algunos temas"*/
+
+
+/*Vista de escritorio*/
+
+@media (min-width: $px768) {
+
+    /*Galeria*/
+
+    .container-invitadas {
+
+        .galeria-invitadas {
+
+            margin-top: 2%;
+
+            h2 {
+                font-size: $px48;
+            }
+
+            .image-galeria {
+                width: 33.3%;
+            }
+        }
+
+    }
+
+    /*Algunos temas*/
+
+    .container-topicos {
+       display: flex;
+       flex-flow: column nowrap;
+        margin-top: $px48;
+        height: auto;
+
+        h2 {
+            font-size: $px48;
+            margin-left: 25px;
+        }
+
+        .list-topicos {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .item-list {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 104px;
+                    height: 104px;
+                    margin: 13px;
+                }
+
+                p {
+                    font-size: $px24;
+                    text-align: center;
+                    width: 220px;
+                    height: 32px; 
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,139 @@
+/*Sección del header*/
+
+.container-header {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        margin: 15px;
+    }
+}
+
+.navbar {
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: $blue;
+    height: 224px;
+    top: 52px;
+}
+
+.navbar ul {
+    height: 184px;
+
+    li {
+        display: block;
+        list-style: none;
+        margin: $px24 $px16;
+    }
+}
+
+.navbar a {
+    text-decoration: none;
+    color: $white;
+    font-family: $font_mono;
+    font-weight: 300;
+
+    &:hover {
+        color: $greensoft;
+        text-decoration: line-through;
+        font-family: $font_mono;
+        font-weight: 500;
+    }
+
+    &:active {
+        color: rgba(6,10,36,0.56);
+    }
+}
+
+/*Comportamiento del Menú hamburguesa*/
+
+.check-menu-btn {
+    display: none;
+
+    &:checked {
+        &~.menu-icon-bars {
+            display: none;
+        }
+    
+        &~.menu-icon-x {
+            display: block;
+        }
+
+        &~.navbar {
+            display: block;
+            position: absolute;
+            animation: navbar-show 0.5s linear;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            top: 52px;
+        }
+    }
+    
+}
+
+.menu-icon-bars {
+    cursor: pointer;
+}
+
+.menu-icon-x {
+    display: none;
+}
+
+@keyframes navbar-show {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+/*Finaliza el menú hamburguesa*/
+
+
+/*Vista escritorio*/
+@media (min-width: $px768) {
+    .container-header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+
+        div {
+            margin: 0% 7% 0% 7%;
+        }
+    }
+
+    .navbar {
+        display: flex;
+        position: initial;
+        background-color: $white;
+        height: 80px;
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: $px80;
+        }
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    .menu-icon-x,
+    .menu-icon-bars,
+    .check-menu-btn {
+        display: none;
+    }
+
+}

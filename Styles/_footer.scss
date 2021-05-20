@@ -1,0 +1,83 @@
+/*Sección de novedades*/
+
+.container-footer {
+    width: 100%;
+    height: 341px;
+    padding: 0px 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: linear-gradient(225deg, $blue 0%, $bluedark 100%);
+    clip-path: polygon(0px 100%, 100% 100%, 100% 0px, 0px 10%);
+
+    h2 {
+        color: $white;
+        margin-top: 64px;
+        margin-bottom: $px36;
+        font-size: $px36;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: $px42;
+    }
+}
+
+/*Sección de redes sociales*/
+.container-media {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: $px24 0px $px30 0px;
+
+    p, .icon-media {
+        width: 288px;
+        margin-bottom: $px10;
+    }
+
+}
+
+.icon-media {
+    a {
+        color: inherit;
+    }
+
+    i {
+        margin: 0px $px16;
+        width: $px16;
+
+        &:hover {
+            color: $blue;
+            transform: scale(2);
+        }
+    }
+}
+
+/*Vista escritorio*/
+
+@media (min-width: $px768) {
+
+    /*Novedades*/
+    .container-footer {
+        height: 441px;
+        clip-path: polygon(0px 100%, 100% 100%, 100% 0px, 0px 20%);
+
+        h2 {
+            margin-top: 150px;
+        }
+        .button {
+            margin-left: 40%;
+        }
+
+    }
+
+    /*Redes sociales*/
+    .container-media {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        p {
+            margin-left: 0px;
+        }
+        
+    }
+}

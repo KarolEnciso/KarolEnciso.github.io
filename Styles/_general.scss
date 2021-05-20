@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Estilos para los botones de las dos secciones*/
+
+.button {
+    font-family: $font_mono;
+    text-decoration: none;
+    text-align: center;
+    width: 288px;
+    height: 48px;
+    background: $greensoft;
+    color: $black;
+    font-size: 16px;
+    line-height: 46px;
+    vertical-align: middle;
+    
+
+    &:hover {
+        background-image: linear-gradient(225deg, $blue 0%, $greensoft 100%);
+        color: white;
+    }
+
+}
+

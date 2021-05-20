@@ -1,0 +1,72 @@
+/*Sección "De donde venimos"*/
+.container-phone {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+    margin-top: -100px;
+    margin-bottom: 27px;
+
+    .image-phone {
+        width: 360px;
+        height: 519px;
+        z-index: 1;
+    }
+}
+
+.content-phone {
+    padding: 0px 5%;
+    width: 100%;
+    margin-bottom: $px20;
+
+    h2 {
+        font-size: $px36;
+        letter-spacing: 0;
+        line-height: $px42;
+        margin: $px10 0px 8px 0px;
+        max-width: 70%;
+    }
+
+    p {
+        font-family: $font_mono;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 22px;
+        margin: $px10 0px 8px 0px;
+        max-width: 90%;
+    }
+}
+
+/*Vista escritorio*/
+
+@media (min-width: $px768) {
+    .container-phone {
+        display: flex;
+        flex-flow: row nowrap;
+        padding-left: 14%;
+        margin-bottom: 60px;
+
+        .image-phone {
+            width: 457px;
+            height: 660px;
+        }
+    }
+
+    .content-phone {
+        width: 50%;
+        margin-left: 0px;
+
+        h2 {
+            font-size: $px48;
+            margin-bottom: $px24;
+            max-width: 90%;
+        }
+
+        p {
+            font-size: $px16;
+            margin-bottom: 15px;
+        }
+    }
+}
